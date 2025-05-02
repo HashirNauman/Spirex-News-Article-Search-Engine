@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPIREX Search Engine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="logo.webp" alt="SPIREX Logo" class="logo">
+      </div>
+
+      <h1>Welcome to SPIREX Search</h1>
+      <p>Enter a query below to search the dataset.</p>
+    </header>
+
+    <!-- Search Form -->
+    <form id="searchForm">
+      <input type="text" id="queryInput" placeholder="Search..." required>
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Button to toggle Add Document Form -->
+    <button id="toggleAddDocumentBtn">Add Document</button>
+
+    <!-- Document Submission Form (Initially hidden) -->
+    <div id="addDocumentContainer" class="hidden">
+      <h2>Add a New Document</h2>
+      <form id="addDocumentForm" method="POST">
+        <input type="text" id="article_id" name="article_id" placeholder="Article ID" required>
+        <input type="text" id="title" name="title" placeholder="Title" required>
+        <input type="text" id="url" name="url" placeholder="URL" required>
+        <input type="text" id="source_id" name="source_id" placeholder="Source ID" required>
+        <input type="date" id="published" name="published_at" placeholder="Published Date" required>
+        <textarea id="content" name="content" placeholder="Document Content" required></textarea>
+        <textarea id="description" name="description" placeholder="Description" required></textarea>
+        <textarea id="full_content" name="full_content" placeholder="Full Content" required></textarea>
+        <button type="submit">Add Document</button>
+      </form>
+    </div>
+
+    <div id="resultsContainer" class="results-container">
+      <!-- Search results will be displayed here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 SPIREX Search. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

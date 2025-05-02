@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('background.webp'); /* Your background image */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-position: center center; /* Position the image in the center */
+  background-attachment: fixed; /* Make the background fixed while scrolling */
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #4CAF50;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.results-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.result-item {
+  width: 100%; /* Make result container full-width */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.result-item:hover {
+  transform: translateY(-5px);
+}
+
+.result-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.result-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.result-item a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  .results-container {
+    grid-template-columns: repeat(1, 1fr); /* Keep 1 column layout */
+  }
+}
+
+@media (min-width: 900px) {
+  .results-container {
+    grid-template-columns: repeat(1, 1fr); /* Keep 1 column layout */
+  }
+}
+
+/* Loading message */
+.loading {
+  font-size: 1.2rem;
+  color: #4CAF50;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* No results message */
+.no-results {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Error message */
+.error {
+  font-size: 1rem;
+  color: #D32F2F;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.result-item h3 a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.result-item h3 a:hover {
+  text-decoration: underline;
+}
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+/* Hide the document form initially */
+#addDocumentContainer.hidden {
+  display: none;
+}
+
+/* Add a transition for smooth appearance */
+#addDocumentContainer {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#addDocumentContainer.show {
+  display: block;
+  opacity: 1;
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  max-width: 150px; /* Adjust width as needed */
+  height: auto;
+}
